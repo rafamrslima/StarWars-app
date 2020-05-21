@@ -3,9 +3,8 @@ using StarWars.App.Domain.Interfaces;
 using StarWars.App.Services.Dtos;
 using StarWarsApp.Data.Infra;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Linq;
-using System;
+using System.Threading.Tasks;
 
 namespace StarWars.App.Services
 {

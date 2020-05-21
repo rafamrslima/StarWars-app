@@ -11,7 +11,7 @@ namespace StarWars.Tests
 		public async Task GetAsync_GivenCorrectUrl_ShouldReturnStarShipsDto()
 		{ 
 			//Arrange
-			string url = Config.StarShipsBaseUrl + "?page=1";
+			string url = Config.StarShipsBaseUrl + "/?page=1";
 
 			//Act
 			var starshipDto = await new StarShipRepository().GetAsync(url);

@@ -11,6 +11,5 @@
         public static bool IsWeek(string duration) => duration.Contains(_week);
         public static bool IsMonth(string duration) => duration.Contains(_month);
         public static bool IsYear(string duration) => duration.Contains(_year);
-
     }
 }

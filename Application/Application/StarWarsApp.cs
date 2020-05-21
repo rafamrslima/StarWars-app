@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using StarWars.App.Domain.Entities;
+﻿using StarWars.App.Domain.Entities;
 using StarWars.App.Domain.Exceptions;
 using StarWars.App.Domain.Interfaces;
 using System;
@@ -35,7 +34,14 @@ namespace StarWarsApp.Application
             Console.WriteLine(string.Empty);
 
             List<StarShip> starships = await _starShipService.GetAllAsync();
+            ShowStops(distance, starships);
 
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
+
+        private static void ShowStops(int distance, List<StarShip> starships)
+        {
             foreach (var starship in starships)
             {
                 try
@@ -47,10 +53,6 @@ namespace StarWarsApp.Application
                     Console.WriteLine($"{starship.Name}: {ex.Message}");
                 }
             }
- 
-
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();
         }
     }
 }
